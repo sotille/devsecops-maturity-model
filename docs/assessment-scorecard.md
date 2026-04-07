@@ -314,8 +314,27 @@ After completing this scorecard:
 
 ---
 
+## Anti-Gaming Controls Quick Reference
+
+Maturity scores influence budget, hiring, and external reputation — which creates incentives to optimize for the score rather than the underlying capability. Before finalizing scores, apply the following structural checks to detect common gaming patterns:
+
+| Red Flag | What It Indicates | Verification |
+|----------|------------------|--------------|
+| Zero SAST/SCA findings across all repos for 30+ days | Tools likely running in warn-only mode or no rules configured | Review tool config: confirm exit-code=1 on HIGH; check that findings are visible to security team |
+| All domains scored 3+ in self-assessment without evidence | Optimistic self-assessment; provisional scores not flagged | Require observable evidence (tool output, screenshot, policy document) for every score ≥ 3 |
+| Domain scores all within 0.5 of each other | Unlikely in practice; suggests scores were averaged or normalized | Check if lowest-scoring sub-practices were excluded from calculation |
+| Rapid score jump (> 1 level in 3 months) without new tool deployment | Scoring methodology change or gaming; not genuine capability improvement | Compare evidence before and after; verify new tooling is operational, not just deployed |
+| Tool deployed but no team-visible dashboard | Tool counts as "deployed" but no one is acting on findings | Confirm findings flow to developers, not just a security report no one reads |
+
+For a comprehensive analysis of gaming patterns and structural controls, see [Metrics Gaming Prevention Guide](metrics-gaming-prevention.md).
+
+When in doubt: lower the score. An honest Level 2 with a clear improvement plan is more useful than a questionable Level 4 that misleads leadership about actual risk exposure.
+
+---
+
 ## Related Documents
 
 - [Maturity Framework](framework.md) — Full five-level model with domain-by-domain capability descriptions
 - [Implementation Guide](implementation.md) — Full assessment methodology, evidence collection guidance, and reporting templates
+- [Metrics Gaming Prevention](metrics-gaming-prevention.md) — Structural controls for maintaining assessment integrity
 - [DevSecOps Methodology](../../devsecops-methodology/docs/implementation.md) — 90-day transformation playbook

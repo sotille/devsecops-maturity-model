@@ -9,6 +9,7 @@ Format: `[version] — [date] — [summary of changes]`
 
 - Added CHANGELOG.md (this file) for version tracking
 - Added "Learning Resources" section to README.md linking to Book 1, techstream-learn labs, and techstream.app
+- [2026-04-07] Added Anti-Gaming Controls Quick Reference section to assessment-scorecard.md — includes red-flag detection table and link to metrics-gaming-prevention.md; updated Related Documents with direct link to gaming prevention guide
 
 ## [1.0.0] — 2024-01-15
 
