@@ -113,7 +113,7 @@ Present results to leadership using the report format. Immediately initiate road
 
 ## Assessment Questionnaire
 
-The following questionnaire covers all eight domains with 4-5 questions per domain (37 questions total). Each question is scored 1-5 by the assessor based on interview responses, corroborated by evidence. Scores are then mapped to domain maturity levels.
+The following questionnaire covers all eight domains with 4-5 questions per domain (39 questions total). Each question is scored 1-5 by the assessor based on interview responses, corroborated by evidence. Scores are then mapped to domain maturity levels.
 
 ### Domain 1: Culture & Organization (7 questions)
 
@@ -303,7 +303,7 @@ The following questionnaire covers all eight domains with 4-5 questions per doma
 
 ---
 
-### Domain 4: CI/CD Security (4 questions)
+### Domain 4: CI/CD Security (5 questions)
 
 **Q4.01 — Secrets Management**
 *How are secrets (API keys, credentials, certificates) managed? Are there any known secrets in code repositories?*
@@ -349,9 +349,20 @@ The following questionnaire covers all eight domains with 4-5 questions per doma
 | 4 | Custom IaC security rules; IaC security debt tracked; drift detection active |
 | 5 | Novel IaC security research; custom policy frameworks published |
 
+**Q4.05 — Software Supply Chain Security**
+*How do you verify the integrity and provenance of artifacts and dependencies used in your build pipelines? Do you generate and maintain SBOMs?*
+
+| Score | Criteria |
+|-------|---------|
+| 1 | No supply chain security controls; third-party dependencies fetched directly from public registries without verification |
+| 2 | Dependency scanning (SCA) in place; some dependency pinning; no SBOM generation |
+| 3 | All dependencies pinned to exact versions with hash verification; SBOM generated for production artifacts; artifact signing implemented; private registry mirror in use |
+| 4 | SBOM fleet management platform deployed (Dependency-Track equivalent); CVE-to-fleet query capability; SLSA provenance generated; signing enforced at admission |
+| 5 | SLSA Level 3+ compliance; published SBOMs for externally distributed software; VEX publishing process; supply chain security research contribution |
+
 ---
 
-### Domain 5: Testing & Validation (4 questions)
+### Domain 5: Testing & Validation (5 questions)
 
 **Q5.01 — Dynamic Application Security Testing (DAST)**
 *Where and how frequently is DAST run? Is it automated?*
@@ -396,6 +407,17 @@ The following questionnaire covers all eight domains with 4-5 questions per doma
 | 3 | Automated API security testing (OWASP API Top 10 coverage) in CI/CD pipeline |
 | 4 | Continuous API security monitoring; API inventory complete and maintained |
 | 5 | API security research; novel API testing methodology published |
+
+**Q5.05 — Fuzz Testing and IAST**
+*Is fuzz testing used for any components? Is Interactive Application Security Testing (IAST) deployed for instrumented runtime testing?*
+
+| Score | Criteria |
+|-------|---------|
+| 1 | No fuzz testing or IAST |
+| 2 | Fuzz testing used ad hoc for high-value components by security team |
+| 3 | Continuous fuzzing (OSS-Fuzz / libFuzzer / AFL++) integrated for parsing and input-handling components; IAST deployed in QA environment for at least one language stack |
+| 4 | Fuzzing corpus maintained and growing; IAST findings tracked alongside SAST; language runtime instrumentation in staging |
+| 5 | Internal fuzzing research; vulnerability discovery shared with upstream; novel fuzzing infrastructure |
 
 ---
 

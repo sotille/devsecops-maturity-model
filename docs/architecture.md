@@ -24,6 +24,67 @@ Each cell in this matrix contains specific criteria that must be met for an orga
 
 The model is designed to produce **actionable assessments** — not just an overall score, but a domain-by-domain profile that reveals exactly where improvements are needed and in what sequence they should be addressed.
 
+### Domain-Level Matrix (Mermaid)
+
+```mermaid
+quadrantChart
+    title TDMM — Domain Profile Example (Illustrative)
+    x-axis "Foundational Domains" --> "Operational Domains"
+    y-axis "Lower Maturity" --> "Higher Maturity"
+    quadrant-1 Invest to Advance
+    quadrant-2 Sustain and Leverage
+    quadrant-3 Critical Gap — Prioritize
+    quadrant-4 Operational Improvement
+    Culture & Org: [0.12, 0.48]
+    Security Requirements: [0.25, 0.44]
+    Secure Development: [0.37, 0.56]
+    CI/CD Security: [0.50, 0.52]
+    Testing & Validation: [0.62, 0.40]
+    Infrastructure Security: [0.75, 0.60]
+    Ops & Monitoring: [0.87, 0.48]
+    Governance & Compliance: [0.50, 0.36]
+```
+
+### Maturity Level Progression (Mermaid)
+
+```mermaid
+flowchart LR
+    L1["Level 1\nInitial\n(Ad Hoc)"]
+    L2["Level 2\nManaged\n(Repeatable)"]
+    L3["Level 3\nDefined\n(Standardized)"]
+    L4["Level 4\nQuantitative\n(Measured)"]
+    L5["Level 5\nOptimizing\n(Continuous)"]
+
+    L1 -->|"Formalize practices\nDeploy core tooling"| L2
+    L2 -->|"Standardize across org\nEnforce pipeline gates"| L3
+    L3 -->|"Instrument metrics\nQuantify risk"| L4
+    L4 -->|"Innovate & lead\nContribute to community"| L5
+
+    style L1 fill:#f8d7da,stroke:#842029
+    style L2 fill:#fff3cd,stroke:#856404
+    style L3 fill:#d1e7dd,stroke:#0f5132
+    style L4 fill:#cfe2ff,stroke:#084298
+    style L5 fill:#e2d9f3,stroke:#432874
+```
+
+### Assessment Evidence Flow (Mermaid)
+
+```mermaid
+flowchart TD
+    I["Structured Interviews\n(60–90 min per domain)"]
+    T["Tooling Evidence\n(Scan results, configs, dashboards)"]
+    M["Metrics Review\n(DORA, MTTD, vuln density)"]
+
+    I --> S["Domain Score\n(1.0–5.0 per domain)"]
+    T --> S
+    M --> S
+
+    S --> W["Weighted Aggregation\n(Domain weights applied)"]
+    W --> O["Overall Maturity Score\n+ Domain Profile Chart"]
+    O --> R["Roadmap\n(Gap prioritization)"]
+    R --> BP["Improvement Plan\n(Level transition guides)"]
+```
+
 ```
          LEVEL 1       LEVEL 2       LEVEL 3       LEVEL 4       LEVEL 5
          Initial       Managed       Defined       Quantitative  Optimizing

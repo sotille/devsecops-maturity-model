@@ -52,8 +52,10 @@ The TDMM is designed to:
 - [Architecture](docs/architecture.md) - Model structure, domain matrix, scoring methodology, and assessment approach
 - [Framework](docs/framework.md) - Full five-level, eight-domain maturity framework with detailed characteristics
 - [Implementation](docs/implementation.md) - Assessment methodology, questionnaire, scoring, and roadmap building
+- [Remediation Playbooks](docs/remediation-playbooks.md) - Actionable advancement guidance for each domain: exact steps, owners, effort estimates, and evidence requirements to advance between levels
 - [Best Practices](docs/best-practices.md) - Running effective assessments, avoiding common pitfalls, communicating results
 - [Roadmap](docs/roadmap.md) - Level transition guides, investment requirements, and transformation timelines
+- [Assessment Scorecard](docs/assessment-scorecard.md) - Standalone workshop scorecard: 45 scored practice statements across all 8 domains, radar chart template, and interpretation guide
 
 ---
 
