@@ -507,5 +507,5 @@ Automated policy generation from risk data and regulatory requirements. Complian
 | **Incident Response** | Undocumented | Documented plan | Tested runbooks | SOAR automated, MTTD/MTTR SLAs | Autonomous operations |
 | **Compliance Posture** | Reactive | Frameworks mapped | Control owners, gaps tracked | Continuous monitoring | Always audit-ready |
 | **Toolchain Maturity** | Minimal or siloed | Core tools deployed | Full pipeline integration | Advanced analytics, feedback loops | AI-augmented, research-grade |
-| **Key Metrics** | None | Incident count, training completion | MTTD, MTTD, gate pass rates | Risk score, vulnerability density, debt | All + community contribution |
+| **Key Metrics** | None | Incident count, training completion | MTTD, MTTR, gate pass rates | Risk score, vulnerability density, debt | All + community contribution |
 | **Org Structure** | Security as gatekeeper | Champions emerging | Champions program, embedded architects | Security in OKRs, DevSecOps team | Security as competitive differentiator |

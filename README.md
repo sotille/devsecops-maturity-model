@@ -56,6 +56,7 @@ The TDMM is designed to:
 - [Best Practices](docs/best-practices.md) - Running effective assessments, avoiding common pitfalls, communicating results
 - [Roadmap](docs/roadmap.md) - Level transition guides, investment requirements, and transformation timelines
 - [Assessment Scorecard](docs/assessment-scorecard.md) - Standalone workshop scorecard: 45 scored practice statements across all 8 domains, radar chart template, and interpretation guide
+- [Metrics Gaming Prevention](docs/metrics-gaming-prevention.md) - Identifying and preventing metrics gaming across all domains: gaming patterns, structural controls, anomaly detection, and metrics design principles that resist gaming
 
 ---
 
@@ -107,6 +108,17 @@ Review docs/best-practices.md for guidance on establishing assessment cadence, s
 | 3 | Defined (Standardized) | Security integrated consistently across the SDLC |
 | 4 | Quantitatively Managed (Measured) | Security driven by metrics and risk quantification |
 | 5 | Optimizing (Continuous Improvement) | Industry-leading, self-improving security program |
+
+---
+
+## Learning Resources
+
+The Techstream Book Series and hands-on lab companion extend the concepts in this framework with structured learning, maturity assessment exercises, and roadmap-building guidance.
+
+- **[Book 1: DevSecOps — Foundations & Transformation](https://www.techstream.app/learn)** — The primary book volume aligned with this framework. Part II covers TDMM in depth: the 8 domains, 5 maturity levels, 2-hour quick-start assessment, and board-level reporting.
+- **[Hands-On Labs (techstream-learn/book-1-foundations/)](https://www.techstream.app/learn)** — Practical exercises including running a TDMM self-assessment, building a transformation roadmap from assessment results, and designing a security champion program.
+- **[Book Series Overview (VOLUMES.md)](../techstream-books/VOLUMES.md)** — Index of all four Techstream volumes covering DevSecOps foundations, CI/CD security, cloud security, and release governance.
+- **[Techstream Platform](https://www.techstream.app)** — The central portal for all Techstream frameworks, documentation, and learning resources.
 
 ---
 
