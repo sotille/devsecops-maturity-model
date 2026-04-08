@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://techstream.app">
+    <img src="https://techstream.app/images/techstream-icon.svg" width="72" height="72" alt="TechStream" />
+  </a>
+</p>
+
 # DevSecOps Maturity Model
 
 A structured, five-level maturity framework for assessing, benchmarking, and advancing DevSecOps practices across software engineering organizations. This model provides CISOs, security architects, and DevSecOps leads with a rigorous, evidence-based methodology for evaluating security integration across the full software development lifecycle.
