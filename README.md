@@ -117,7 +117,8 @@ The Techstream Book Series and hands-on lab companion extend the concepts in thi
 
 - **[Book 1: DevSecOps — Foundations & Transformation](https://www.techstream.app/learn)** — The primary book volume aligned with this framework. Part II covers TDMM in depth: the 8 domains, 5 maturity levels, 2-hour quick-start assessment, and board-level reporting.
 - **[Hands-On Labs (techstream-learn/book-1-foundations/)](https://www.techstream.app/learn)** — Practical exercises including running a TDMM self-assessment, building a transformation roadmap from assessment results, and designing a security champion program.
-- **[Book Series Overview (VOLUMES.md)](../techstream-books/VOLUMES.md)** — Index of all four Techstream volumes covering DevSecOps foundations, CI/CD security, cloud security, and release governance.
+- **[Book 5: AI and Agentic Systems Security (Ch 18 — AI Security Maturity)](https://www.techstream.app/learn)** — Chapter 18 extends the TDMM maturity model to AI and agentic system security, defining a five-level AI Security Maturity scale. Use alongside the [ai-devsecops-framework maturity model](../ai-devsecops-framework/docs/maturity-model.md) for AI-specific assessments.
+- **[Book Series Overview (VOLUMES.md)](../techstream-books/VOLUMES.md)** — Index of all five Techstream volumes covering DevSecOps foundations, CI/CD security, cloud security, release governance, and AI and agentic systems security.
 - **[Techstream Platform](https://www.techstream.app)** — The central portal for all Techstream frameworks, documentation, and learning resources.
 
 ---

@@ -756,4 +756,89 @@ Maturity advancement is fundamentally a change management challenge. Technical g
 
 **Address resistance directly**: The most common sources of resistance are fear of blame (if scores are low), fear of slowdown (security gates), and tool fatigue (too many new tools). Address each directly with clear communication and realistic expectations.
 
+---
+
+## Domain 9: Automation Capability Assessment
+
+The eight core assessment domains evaluate security practice maturity. This supplementary domain evaluates the maturity of the DevSecOps tooling stack itself — an organization can score Level 3 on process practices while operating immature, fragile automation that limits its ability to sustain those practices at scale.
+
+### Assessment Questions — Automation Capability
+
+**Q9.1 — Scan result coverage and completeness**
+> What percentage of repositories in the organization have automated SAST, SCA, and secrets scanning configured and actively running?
+
+| Level | Description | Evidence |
+|---|---|---|
+| 1 | < 25% of repositories covered | Manual review of pipeline configurations |
+| 2 | 25–74% covered; gaps tracked in backlog | Coverage dashboard or inventory |
+| 3 | 75–94% covered; coverage monitored automatically | Automated coverage report; gaps have owners and deadlines |
+| 4 | ≥ 95% covered; new repos auto-enrolled | Enrollment automation; exception list reviewed quarterly |
+| 5 | 100% coverage enforced; repo creation fails if pipeline not configured | Policy-as-code gate on repository provisioning |
+
+**Q9.2 — False positive rate and tuning maturity**
+> What is the current false positive rate for SAST findings, and what is the process for tuning the tooling?
+
+| Level | Description |
+|---|---|
+| 1 | False positive rate unknown; no measurement |
+| 2 | FP rate estimated informally; ad-hoc tuning when engineers complain |
+| 3 | FP rate measured per tool quarterly; documented tuning process exists |
+| 4 | FP rate tracked monthly by tool and by team; tuning SLAs defined (resolve high-FP rules within 30 days) |
+| 5 | FP rate < 15% for all tools; automated anomaly detection alerts when a rule's FP rate exceeds threshold |
+
+**Q9.3 — Mean time to detection (MTTD) for new vulnerabilities**
+> How quickly does the organization detect that a newly disclosed CVE affects production services?
+
+| Level | Description |
+|---|---|
+| 1 | Days to weeks; reactive (discovered via external notification or incident) |
+| 2 | < 5 business days; periodic manual SCA scans or Dependabot alerts |
+| 3 | < 24 hours; continuous SCA with daily scan runs and automated notifications |
+| 4 | < 4 hours; event-driven scanning triggered by new CVE publication (webhook from NVD/GHSA) |
+| 5 | < 1 hour; SBOM fleet query executed automatically on CVE publication; affected services notified before manual review begins |
+
+**Q9.4 — Security finding triage automation**
+> What percentage of security findings are automatically triaged (classified, prioritized, and routed) without requiring manual triage for each finding?
+
+| Level | Description |
+|---|---|
+| 1 | 0%; all findings require manual triage from a shared queue |
+| 2 | < 25%; duplicate suppression via tool configuration; severity-based routing |
+| 3 | 25–59%; VEX documents suppress known-non-exploitable findings; auto-close for fixed-version upgrades |
+| 4 | 60–84%; AI-assisted triage with human review for High/Critical; auto-close for Medium and below when VEX present |
+| 5 | ≥ 85% auto-triaged with full audit trail; human triage required only for Critical findings and novel vulnerability patterns |
+
+**Q9.5 — Tooling stack observability**
+> Does the organization have visibility into the performance and reliability of its security tooling pipeline?
+
+| Level | Description |
+|---|---|
+| 1 | No monitoring; tool failures are discovered when someone notices missing scan results |
+| 2 | Basic alerting on pipeline failures; scan completion tracked manually |
+| 3 | Dashboard shows scan success rate, scan duration, and coverage per tool; alert on failure |
+| 4 | SLAs defined for scan tools (e.g., SAST must complete in < 5 minutes for 95% of builds); SLA violations trigger PagerDuty |
+| 5 | Full observability: coverage, latency, FP rate, finding age, escape rate — all monitored with automated trend analysis |
+
+**Q9.6 — Tooling update and CVE response for security tools**
+> How quickly are the security tools themselves (Semgrep, Trivy, Checkov, etc.) updated when they have known vulnerabilities or significant rule improvements?
+
+| Level | Description |
+|---|---|
+| 1 | No update process; tools may be years out of date |
+| 2 | Manual updates on an ad-hoc basis; no tracking of tool versions |
+| 3 | Dependabot or Renovate manages tool version updates; updates reviewed weekly |
+| 4 | Tool updates tested in staging pipeline before production rollout; CVE patches applied within 7 days |
+| 5 | Fully automated tool update pipeline with behavioral tests validating that update does not increase FP rate or change findings on known-vulnerable test fixtures |
+
+### Automation Capability Score
+
+The Automation Capability domain is weighted at **10%** of the composite TDMM score. It is intentionally lower-weighted than process and people domains because automation capability is a means to an end — high automation with poor process produces unreliable, misleading security signals.
+
+| Score Range | Interpretation |
+|---|---|
+| 1.0–1.9 | Automation is a blocker: practices cannot be sustained at scale without improvement |
+| 2.0–2.9 | Automation supports basic DevSecOps; scaling to the full organization will expose gaps |
+| 3.0–3.9 | Automation is adequate for current scale; invest in coverage and observability |
+| 4.0–5.0 | Automation is a differentiator; focus on fine-tuning and emerging threat integration |
+
 **Measure enablement, not gatekeeping**: Track metrics that demonstrate security enabling velocity (finding vulnerabilities before production, preventing incidents) rather than only metrics that emphasize blockage (failed gates, rejected deployments).
