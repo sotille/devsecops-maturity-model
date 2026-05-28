@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "DevSecOps Maturity Model (TDMM)"
+message: "If you reference, cite, or build upon this framework, please cite it as below."
+type: software
+authors:
+  - family-names: Sotille
+    given-names: Felipe
+    affiliation: "TechStream (Independent)"
+    email: "fsotille@gmail.com"
+repository-code: "https://github.com/sotille/devsecops-maturity-model"
+url: "https://www.techstream.app"
+license: Apache-2.0
+version: "1.0.0"
+date-released: "2026-05-17"
+abstract: >-
+  The TechStream DevSecOps Maturity Model (TDMM): a 5-level, 37-question structured assessment instrument for evaluating organizational DevSecOps maturity. Includes scoring rubric, gap analysis methodology, and advancement roadmap recommendations aligned with NIST CSF and CMMI-derived maturity scales.
+keywords:
+  - maturity-model
+  - tdmm
+  - assessment
+  - 5-level
+  - 37-question
+  - cmmi
+  - nist-csf
