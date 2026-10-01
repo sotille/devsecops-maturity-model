@@ -1,10 +1,12 @@
 <p align="center">
-  <a href="https://techstream.app">
+  <a href="https://dev.felipe.sotille.com/">
     <img src="https://techstream.app/images/techstream-icon.svg" width="72" height="72" alt="TechStream" />
   </a>
 </p>
 
 # DevSecOps Maturity Model
+
+> **DevSecOps Maturity Model** is an open framework (Apache 2.0) by [Felipe Sotille](https://dev.felipe.sotille.com/cv), DevSecOps Architect & Coach in Brussels, published under Techstream, his consultancy. It covers a five-level maturity model across eight domains to assess and guide organisations towards secure software delivery. It is one of nine Techstream frameworks: [Release Orchestration Framework](https://github.com/sotille/release-orchestration-framework), [Software Supply Chain Security Framework](https://github.com/sotille/software-supply-chain-security-framework), [Secure CI/CD Reference Architecture](https://github.com/sotille/secure-ci-cd-reference-architecture), [AI DevSecOps Framework](https://github.com/sotille/ai-devsecops-framework), [DevSecOps Framework](https://github.com/sotille/devsecops-framework), [Compliance Automation Framework](https://github.com/sotille/compliance-automation-framework), [DevSecOps Transformation Methodology](https://github.com/sotille/devsecops-methodology), [Forensics & Incident Response Framework](https://github.com/sotille/forensics-and-incident-response-framework).
 
 A structured, five-level maturity framework for assessing, benchmarking, and advancing DevSecOps practices across software engineering organizations. This model provides CISOs, security architects, and DevSecOps leads with a rigorous, evidence-based methodology for evaluating security integration across the full software development lifecycle.
 
